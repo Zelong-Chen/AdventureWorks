@@ -1,7 +1,7 @@
 # Abstract
 Analyzed the business request from a sales manager from AdventureWorks to generate an executive sales report of the company's internet sales. Identify the necessary data source from the company's data warehouse on Microsoft SQL Server, then clean/extract data through SQL queries. Import extracted data into Power BI to create interactive dashboards through Power BI that effectively communicate business insights that was specified from the sales manager.
 
-Key Skills: Microsoft SQL Server, SQL, Power BI
+Key Skills: Microsoft SQL Server, SQL, Power BI, Business Analytics
 
 # Business Request
 
@@ -19,7 +19,7 @@ Let me know if you need anything else!
 - Comparison between Sales and Budget
 - Most recent 2 years
 
-# Data Cleaning and Extraction
+# Data Cleaning and Extraction (SQL)
 
 Tables Required:
 - Internet Sales
@@ -125,9 +125,11 @@ FROM   [AdventureWorksDW2019].[dbo].[dimgeography] AS g
 ```
 
 # Data Modeling
+Below is a image of the data model created in Power BI with the extracted tables from SQL server. Data model follows the Star Schema with Dimension tables on the top pointing to Fact tables on the bottom.
 
 ![](/images/datamodel.PNG)
 
 # Dashboard
+Below is a snapshot of the finished executive sales dashboard, click on the image to be directed to the online dashboard!
 
 [![name](/images/dashboard.PNG)](https://app.powerbi.com/view?r=eyJrIjoiOGM2YzRlMzEtOGU0YS00MDBlLWEwNDAtOGVjNTAyZTQ3YzA0IiwidCI6ImUzNWZkZDkzLTAxM2QtNDc3MC1hZDNmLTgwZGJmNWUxNmEzNSJ9&pageName=ReportSection)
