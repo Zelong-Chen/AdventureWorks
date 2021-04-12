@@ -23,8 +23,8 @@ Let me know if you need anything else!
 
 Tables Required:
 - Internet Sales
-  - Sales Territory   
-- Dates 
+  - Sales Territory
+- Dates
 - Products
 - Customer
   - Geography   
