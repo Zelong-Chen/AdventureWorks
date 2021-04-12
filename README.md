@@ -14,7 +14,21 @@ We measure our numbers against budget so I added that in a spreadsheet so we can
 The budget is for 2021 and we usually look 2 years back in time when we do analysis of sales.
 Let me know if you need anything else!
 
+- Dashboard on Internet Sales
+- Filter by Products and Customers over Time
+- Comparison between Sales and Budget
+- Most recent 2 years
+
 # Data Cleaning and Extraction
+
+Tables Required:
+- Internet Sales
+  - Sales Territory   
+- Dates 
+- Products
+- Customer
+  - Geography   
+
 
 # Data Modeling
 
