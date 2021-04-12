@@ -26,9 +26,103 @@ Tables Required:
   - Sales Territory
 - Dates
 - Products
+  - Category and Subcategory   
 - Customer
   - Geography
 
+### Internet Sales
+```sql
+SELECT [productkey],
+       [orderdatekey],
+       [duedatekey],
+       [shipdatekey],
+       [customerkey],
+       [salesterritorykey],
+       [salesamount],
+       [taxamt]
+FROM   [AdventureWorksDW2019].[dbo].[factinternetsales]
+WHERE  LEFT(orderdatekey, 4) >= Year(Getdate()) - 2 -- Obtain only most recent 2 years
+ORDER BY orderdatekey ASC; 
+```
+
+### Sales Territory
+```sql
+SELECT [salesterritorykey],
+       [salesterritoryregion],
+       [salesterritorycountry],
+       [salesterritorygroup]
+FROM   [AdventureWorksDW2019].[dbo].[dimsalesterritory] 
+```
+
+### Dates
+```sql
+SELECT [datekey],
+       [fulldatealternatekey]      AS Date,
+       [englishdaynameofweek]      AS Day,
+       [englishmonthname]          AS Month,
+       LEFT([englishmonthname], 3) AS MonthShort,
+       [monthnumberofyear]         AS MonthNumber,
+       [calendarquarter]           AS Quarter,
+       [calendaryear]              AS Year
+FROM   [AdventureWorksDW2019].[dbo].[dimdate]
+WHERE  calendaryear >= 2019 
+```
+
+### Products
+```sql
+SELECT [productkey],
+       [productalternatekey]            AS ProductItemCode,
+       [englishproductname]             AS ProductName,
+       ps.englishproductsubcategoryname AS SubCategory,
+       pc.englishproductcategoryname    AS ProductCategory,
+       [color]                          AS ProductColor,
+       [size]                           AS ProductSize,
+       [productline],
+       [modelname]                      AS ProductModelName,
+       [englishdescription]             AS ProductDescription,
+       Isnull([status], 'Outdated')     AS ProductStatus
+FROM   [AdventureWorksDW2019].[dbo].[dimproduct] AS p
+       LEFT JOIN dbo.dimproductsubcategory AS ps
+              ON p.productsubcategorykey = ps.productsubcategorykey
+       LEFT JOIN dbo.dimproductcategory AS pc
+              ON ps.productcategorykey = pc.productcategorykey
+ORDER BY p.productkey ASC 
+```
+
+### Customer
+```sql
+SELECT [customerkey],
+       [geographykey],
+       [firstname],
+       [lastname],
+       firstname + ' ' + lastname AS FullName,
+       CASE [gender]
+         WHEN 'M' THEN 'Male'
+         WHEN 'F' THEN 'Female'
+       END                        AS Gender,
+       [datefirstpurchase],
+       [houseownerflag],
+       [numbercarsowned]
+FROM   [AdventureWorksDW2019].[dbo].[dimcustomer]
+ORDER BY customerkey ASC 
+```
+
+### Geography
+```sql
+SELECT [geographykey],
+       [city],
+       [stateprovincecode],
+       [stateprovincename],
+       [countryregioncode],
+       [englishcountryregionname],
+       [postalcode],
+       g.salesterritorykey,
+       s.salesterritoryregion,
+       s.salesterritoryregion
+FROM   [AdventureWorksDW2019].[dbo].[dimgeography] AS g
+       LEFT JOIN dbo.dimsalesterritory AS s
+              ON g.salesterritorykey = s.salesterritorykey 
+```
 
 # Data Modeling
 
