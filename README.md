@@ -27,7 +27,7 @@ Tables Required:
 - Dates
 - Products
 - Customer
-  - Geography   
+  - Geography
 
 
 # Data Modeling
