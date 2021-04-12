@@ -10,3 +10,5 @@ Key Skills: Microsoft SQL Server, SQL, Power BI
 # Data Modeling
 
 # Dashboard
+
+[![name](/images/dashboard.PNG)](https://app.powerbi.com/view?r=eyJrIjoiOGM2YzRlMzEtOGU0YS00MDBlLWEwNDAtOGVjNTAyZTQ3YzA0IiwidCI6ImUzNWZkZDkzLTAxM2QtNDc3MC1hZDNmLTgwZGJmNWUxNmEzNSJ9&pageName=ReportSection)
