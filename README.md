@@ -136,4 +136,4 @@ Below is a image of the data model created in Power BI with the extracted tables
 # Dashboard
 Below is a snapshot of the finished executive sales dashboard, click on the image to be directed to the online dashboard!
 
-[![name](/images/dashboard.PNG)](https://app.powerbi.com/view?r=eyJrIjoiOGM2YzRlMzEtOGU0YS00MDBlLWEwNDAtOGVjNTAyZTQ3YzA0IiwidCI6ImUzNWZkZDkzLTAxM2QtNDc3MC1hZDNmLTgwZGJmNWUxNmEzNSJ9&pageName=ReportSection)
+[![name](/images/dashboard.PNG)](https://app.powerbi.com/view?r=eyJrIjoiOGM2YzRlMzEtOGU0YS00MDBlLWEwNDAtOGVjNTAyZTQ3YzA0IiwidCI6ImUzNWZkZDkzLTAxM2QtNDc3MC1hZDNmLTgwZGJmNWUxNmEzNSJ9&pageName=ReportSection "Click Here!")
