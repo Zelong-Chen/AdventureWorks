@@ -3,6 +3,10 @@ Examined the business request from a sales manager from AdventureWorks to genera
 
 **Key Skills:** Microsoft SQL Server, SQL, Power BI, Business Analytics
 
+**Snapshot:** 
+
+![](/images/snapshot_adventureworks.png)
+
 # Business Request
 
 Sales Manager:
